@@ -1,0 +1,517 @@
+<!-- app.component.html -->
+<main class="bg-white dark:bg-slate-950 text-gray-800 dark:text-white transition-colors duration-300">
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 shadow-md transition-colors duration-300 bg-white dark:bg-slate-900">
+    <div class="container mx-auto px-6 sm:px-10 md:px-20 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 dark:text-purple-400"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span class="text-xl font-bold text-gray-800 dark:text-white">Jane Doe</span>
+      </div>
+      <div class="flex space-x-6">
+        <!-- Use *ngFor to loop through the navItems array from your component.ts -->
+        <a *ngFor="let item of navItems"
+           (click)="scrollToSection(item.path)"
+           class="flex items-center cursor-pointer font-medium transition-colors duration-300 hover:text-purple-600 dark:hover:text-purple-400">
+          <!-- The icons would be included here, or you could add an icon property to your navItems array -->
+          {{ item.name }}
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <!-- Theme toggle button (you would need to implement the toggleTheme() method in your .ts file) -->
+        <button id="theme-toggle" class="p-2 rounded-full transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-slate-800" aria-label="Toggle theme">
+          <!-- Moon icon for light mode, Sun for dark mode -->
+          <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-800 dark:text-white"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- All sections of the website will be here, each with a unique ID -->
+  <div>
+    <section id="home-section" class="py-20 px-6 sm:px-10 md:px-20 min-h-screen flex items-center">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
+          Hi, I'm <span class="text-purple-600 dark:text-purple-400">Jane Doe</span>
+        </h1>
+        <p class="text-xl sm:text-2xl font-light mb-8">
+          A passionate software developer creating beautiful and functional web experiences.
+        </p>
+        <a (click)="scrollToSection('projects-section')" class="inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 bg-purple-600 text-white shadow-lg hover:bg-purple-700">
+          View My Work
+        </a>
+      </div>
+    </section>
+
+    <section id="about-section" class="py-20 px-6 sm:px-10 md:px-20 min-h-screen flex items-center bg-gray-100 dark:bg-slate-900">
+      <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2 text-left">
+          <h2 class="text-3xl sm:text-4xl font-bold section-title">
+            About Me
+          </h2>
+          <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+            I am a dedicated full-stack developer with a strong foundation in modern web technologies. I love building
+            scalable and user-friendly applications from the ground up. My expertise includes JavaScript, React, Node.js,
+            and various database technologies. I am a lifelong learner and always eager to take on new challenges.
+          </p>
+          <div class="flex space-x-4 mt-6">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 dark:text-purple-400 hover:scale-110 transition-transform"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 dark:text-purple-400 hover:scale-110 transition-transform"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.2-.3 6.6-1.6 6.6-7A5.5 5.5 0 0 0 20 4.7l.6-1.5-.2-1c-.5-.7-2-1-3.5-1A12.7 12.7 0 0 0 12 3.4C8.7 1.8 5.7 2.1 4 4.7a5.5 5.5 0 0 0 0 5.4c0 5.4 3.4 6.7 6.6 7a4.8 4.8 0 0 0-1 3.2v4"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img
+            src="https://placehold.co/500x500/8b5cf6/ffffff?text=Your+Photo"
+            alt="A professional portrait of the developer"
+            class="rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80 mx-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="projects-section" class="py-20 px-6 sm:px-10 md:px-20 min-h-screen flex items-center">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold section-title">
+          My Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <div class="p-6 rounded-xl transition-all duration-300 transform hover:scale-105 bg-gray-100 dark:bg-slate-900 shadow-md hover:shadow-lg">
+            <h3 class="text-xl font-bold mb-2 text-purple-600 dark:text-purple-400">Project One</h3>
+            <p class="mb-4 text-gray-600 dark:text-gray-300">A brief description of my first project, highlighting the technologies used like React, Node.js, and MongoDB.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              View Project
+            </a>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="p-6 rounded-xl transition-all duration-300 transform hover:scale-105 bg-gray-100 dark:bg-slate-900 shadow-md hover:shadow-lg">
+            <h3 class="text-xl font-bold mb-2 text-purple-600 dark:text-purple-400">Project Two</h3>
+            <p class="mb-4 text-gray-600 dark:text-gray-300">A second project that showcases my skills in front-end development, including responsive design and complex UI/UX.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              View Project
+            </a>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="p-6 rounded-xl transition-all duration-300 transform hover:scale-105 bg-gray-100 dark:bg-slate-900 shadow-md hover:shadow-lg">
+            <h3 class="text-xl font-bold mb-2 text-purple-600 dark:text-purple-400">Project Three</h3>
+            <p class="mb-4 text-gray-600 dark:text-gray-300">An a third project where I built a full-stack application from scratch, focusing on API design and data management.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              View Project
+            </a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+    <section id="contact-section" class="py-20 px-6 sm:px-10 md:px-20 min-h-screen flex items-center bg-gray-100 dark:bg-slate-900">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold section-title">
+          Get In Touch
+        </h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+          I'm currently open to new opportunities. Feel free to reach out to me via email or connect with me on LinkedIn.
+        </p>
+        <a href="mailto:j.doe@example.com" class="inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 bg-purple-600 text-white shadow-lg hover:bg-purple-700">
+          Email Me
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-gray-100 dark:bg-slate-900 text-gray-600 dark:text-gray-400">
+    <p>&copy; 2024 Jane Doe. All rights reserved.</p>
+  </footer>
+
+</main>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+        }
+
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-header, .education-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .job-title, .degree, .project-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .company, .school, .project-tech {
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-list {
+            list-style: none;
+            color: #555;
+        }
+
+        .skill-list li {
+            margin-bottom: 4px;
+            font-size: 0.9em;
+        }
+
+        .project-links {
+            margin-top: 10px;
+        }
+
+        .project-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.9em;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .experience-header, .education-header, .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>YOUR NAME</h1>
+            <h2>Software Developer</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>your.email</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>(555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>City, State</span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <span>linkedin.com/in/yourprofile</span>
+                </div>
+                <div class="contact-item">
+                    <span>💻</span>
+                    <span>github.com/yourusername</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h3>Professional Summary</h3>
+                <div class="summary">
+                    Passionate software developer with X years of experience in web development, specializing in modern JavaScript frameworks and responsive design. Proven track record of delivering high-quality, scalable applications and collaborating effectively in agile environments. Committed to continuous learning and staying current with industry best practices.
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <ul class="skill-list">
+                            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                            <li>Angular, React, Vue.js</li>
+                            <li>TypeScript</li>
+                            <li>Responsive Design</li>
+                            <li>Bootstrap, Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <ul class="skill-list">
+                            <li>Node.js, Express.js</li>
+                            <li>Python, Django/Flask</li>
+                            <li>Java, Spring Boot</li>
+                            <li>RESTful APIs</li>
+                            <li>GraphQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Database</h4>
+                        <ul class="skill-list">
+                            <li>MongoDB, PostgreSQL</li>
+                            <li>MySQL, SQLite</li>
+                            <li>Redis</li>
+                            <li>Database Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & DevOps</h4>
+                        <ul class="skill-list">
+                            <li>Git, GitHub</li>
+                            <li>Docker, Kubernetes</li>
+                            <li>AWS, Azure</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Jest, Cypress</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Work Experience</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Senior Software Developer</div>
+                            <div class="company">Company Name</div>
+                        </div>
+                        <div class="date">January 2023 - Present</div>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Led development of a full-stack web application using Angular and Node.js, resulting in 40% improvement in user engagement</li>
+                            <li>Mentored junior developers and conducted code reviews to maintain code quality standards</li>
+                            <li>Collaborated with cross-functional teams to implement new features and optimize application performance</li>
+                            <li>Implemented automated testing strategies, achieving 90% code coverage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Software Developer</div>
+                            <div class="company">Previous Company</div>
+                        </div>
+                        <div class="date">June 2021 - December 2022</div>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Developed and maintained multiple client-facing applications using React and TypeScript</li>
+                            <li>Integrated third-party APIs and payment gateways to enhance application functionality</li>
+                            <li>Participated in agile development processes, including sprint planning and retrospectives</li>
+                            <li>Optimized database queries and improved application loading times by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Projects</h3>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <div>
+                            <div class="project-title">E-commerce Platform</div>
+                            <div class="project-tech">Angular, Node.js, MongoDB, Stripe API</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        Built a full-featured e-commerce platform with user authentication, product management, shopping cart functionality, and secure payment processing. Implemented responsive design and optimized for mobile users.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">GitHub Repository</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div>
+                            <div class="project-title">Task Management App</div>
+                            <div class="project-tech">React, Firebase, Material-UI</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        Created a collaborative task management application with real-time updates, user roles, and drag-and-drop functionality. Features include task assignment, progress tracking, and team collaboration tools.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Education</h3>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <div class="degree">Bachelor of Science in Computer Science</div>
+                            <div class="school">University Name</div>
+                        </div>
+                        <div class="date">2017 - 2021</div>
+                    </div>
+                    <div class="description">
+                        Relevant coursework: Data Structures & Algorithms, Software Engineering, Database Systems, Web Development, Machine Learning
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Certifications</h3>
+                <div class="description">
+                    <ul>
+                        <li>AWS Certified Developer Associate</li>
+                        <li>MongoDB Certified Developer</li>
+                        <li>Google Cloud Professional Developer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>  -->
