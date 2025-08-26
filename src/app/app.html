@@ -1,127 +1,410 @@
-<div class="bg-gray-950 text-gray-200 min-h-screen font-sans antialiased relative overflow-hidden">
-      
-      <!-- Main Content Container -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Navigation Bar -->
-        <nav class="flex justify-between items-center py-8 md:py-8 fixed top-0 left-0 right-0 bg-gray-950 bg-opacity-90 backdrop-blur-md z-20 px-4 sm:px-6 lg:px-8 border-b border-gray-800">
-          <div class="text-xl font-bold font-serif text-gray-200">MUSKAN.</div>
-          <div class="hidden md:flex space-x-8 lg:space-x-12">
-            <a (click)="scrollToSection('intro')" class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer">Intro</a>
-            <a (click)="scrollToSection('about')" class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer">About</a>
-            <a (click)="scrollToSection('works')" class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer">Works</a>
-            <a (click)="scrollToSection('contact')" class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer">Say hello</a>
-          </div>
-        </nav>
+<div
+  class="bg-gray-950 text-gray-200 min-h-screen font-sans antialiased relative overflow-hidden"
+>
+  <!-- Main Content Container -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Navigation Bar -->
+    <nav
+      class="flex justify-between items-center py-8 md:py-8 fixed top-0 left-0 right-0 bg-gray-950 bg-opacity-90 backdrop-blur-md z-20 px-4 sm:px-6 lg:px-8 border-b border-gray-800"
+    >
+      <div class="text-xl font-bold font-serif text-gray-200">MUSKAN.</div>
+      <div class="hidden md:flex space-x-8 lg:space-x-12">
+        <a
+          (click)="scrollToSection('intro')"
+          class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer"
+          >Intro</a
+        >
+        <a
+          (click)="scrollToSection('about')"
+          class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer"
+          >About</a
+        >
+        <a
+          (click)="scrollToSection('experience')"
+          class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer"
+          >Experience</a
+        >
+        <a
+          (click)="scrollToSection('works')"
+          class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer"
+          >Works</a
+        >
+        <a
+          (click)="scrollToSection('contact')"
+          class="hover:text-gray-400 transition-colors uppercase text-sm font-medium cursor-pointer"
+          >Say hello</a
+        >
+      </div>
+    </nav>
 
-        <!-- Hero Section -->
-        <header id="intro" class="flex flex-col md:flex-row items-center md:items-start justify-between py-16 sm:py-24 md:py-32 lg:py-48">
-          <div class="max-w-3xl">
-            <div class="flex items-center mb-4">
-              <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
-              <span class="text-xs tracking-widest uppercase text-gray-400 font-mono">Hello</span>
-            </div>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight">
-              I am Muskan,<br>a Software Engineer<br>& Front-End<br>Developer based<br>in India.
-            </h1>
-          </div>
-          
-        <!-- Vertical Socials & Scroll Indicator -->
-          <div class="hidden md:flex flex-col items-end space-y-8 lg:space-y-16 mt-16 md:mt-0">
-            <div class="flex flex-col items-end space-y-4 text-gray-400">
-              <a href="https://github.com/Miko-29" target="_blank" class="hover:text-gray-300 transition-colors text-xs tracking-widest uppercase">Github</a>
-              <a href="https://www.linkedin.com/in/muskan-kumari-7a8937227" target="_blank" class="hover:text-gray-300 transition-colors text-xs tracking-widest uppercase">Linkedin
-              </a>
-              <a href="https://leetcode.com/u/miko29/" target="_blank" class="hover:text-gray-300 transition-colors text-xs tracking-widest uppercase">Leetcode</a>
-            </div>
-            <a (click)="scrollToSection('about')" class="animate-bounce mt-16 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </a>
-          </div>
-        </header>
-
-        <!-- About Section -->
-        <section id="about" class="py-16 md:py-24 scroll-mt-28">
-          <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-16">
-             <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center items-center">
-               <button class="bg-transparent border border-gray-700 text-gray-200 font-bold py-4 px-8 rounded-md hover:bg-gray-800 transition-colors">
-                 DOWNLOAD CV
-               </button>
-             </div>
-             <div class="md:w-1/2">
-               <div class="flex items-center mb-4">
-                 <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
-                 <span class="text-xs tracking-widest uppercase text-gray-400 font-mono">About</span>
-               </div>
-               <p class="text-xl leading-relaxed text-gray-400 mb-8">
-                 I am Muskan, a Software Engineer with a passion for building, creating, and solving. My journey with technology began not with a career, but with a simple curiosity that has since evolved into a professional commitment to crafting elegant and performant digital experiences. Over my career, I specialize in using Angular and Ionic to architect scalable and complex platforms that turn intricate data into seamless digital experiences. Ultimately, I am a builder committed to crafting intuitive user experiences and writing code that is as reliable as it is innovative. 
-               </p> 
-             </div>
-           </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="works" class="py-16 md:py-24">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-300 mb-8">Here are some of my favorite <br>projects that I deeply love, and that I'd love to have done myself.</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-              <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+1" alt="Project 1" class="w-full h-auto transform transition-transform duration-300 group-hover:scale-105">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-lg font-bold">Project One</span>
-              </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-              <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+2" alt="Project 2" class="w-full h-auto transform transition-transform duration-300 group-hover:scale-105">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-lg font-bold">Project Two</span>
-              </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-              <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+3" alt="Project 3" class="w-full h-auto transform transition-transform duration-300 group-hover:scale-105">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-lg font-bold">Project Three</span>
-              </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-              <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+4" alt="Project 4" class="w-full h-auto transform transition-transform duration-300 group-hover:scale-105">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-lg font-bold">Project Four</span>
-              </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-              <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+5" alt="Project 5" class="w-full h-auto transform transition-transform duration-300 group-hover:scale-105">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-lg font-bold">Project Five</span>
-              </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-              <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+6" alt="Project 6" class="w-full h-auto transform transition-transform duration-300 group-hover:scale-105">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-lg font-bold">Project Six</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-300 mb-8">I would love to hear from you. Whether it's a project, an idea, or just a chat. Let's build something great.</h2>
-          <form class="space-y-6">
-            <input type="text" placeholder="Your name" class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 focus:outline-none focus:border-gray-500">
-            <input type="email" placeholder="Your email address" class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 focus:outline-none focus:border-gray-500">
-            <textarea placeholder="Your message" rows="6" class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 resize-none focus:outline-none focus:border-gray-500"></textarea>
-            <button type="submit" class="w-full bg-white text-gray-900 font-bold py-4 rounded-md hover:bg-gray-200 transition-colors">
-              Send it
-            </button>
-          </form>
-        </section>
-
+    <!-- Hero Section -->
+    <header
+      id="intro"
+      class="flex flex-col md:flex-row items-center md:items-start justify-between py-16 sm:py-24 md:py-32 lg:py-48"
+    >
+      <div class="max-w-3xl">
+        <div class="flex items-center mb-4">
+          <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
+          <span
+            class="text-xs tracking-widest uppercase text-gray-400 font-mono"
+            >Hello</span
+          >
+        </div>
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight"
+        >
+          I am Muskan,<br />a Software Engineer<br />& Front-End<br />Developer
+          based<br />in India.
+        </h1>
       </div>
 
-      <!-- Footer -->
-      <footer class="text-center py-8 text-gray-500">
-        <p>&copy; 2024 Muskan. All rights reserved.</p>
-      </footer>
-    </div>
+      <!-- Vertical Socials & Scroll Indicator -->
+      <div
+        class="hidden md:flex flex-col items-end space-y-8 lg:space-y-16 mt-16 md:mt-0"
+      >
+        <div class="flex flex-col items-end space-y-4 text-gray-400">
+          <a
+            href="https://github.com/Miko-29"
+            target="_blank"
+            class="hover:text-gray-300 transition-colors text-xs tracking-widest uppercase"
+            >Github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/muskan-kumari-7a8937227"
+            target="_blank"
+            class="hover:text-gray-300 transition-colors text-xs tracking-widest uppercase"
+            >Linkedin
+          </a>
+          <a
+            href="https://leetcode.com/u/miko29/"
+            target="_blank"
+            class="hover:text-gray-300 transition-colors text-xs tracking-widest uppercase"
+            >Leetcode</a
+          >
+        </div>
+        <a
+          (click)="scrollToSection('about')"
+          class="animate-bounce mt-16 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 scroll-mt-28">
+      <div class="flex flex-col md:flex-row items-center md:space-x-16">
+        <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center items-center">
+          <button
+            class="bg-transparent border border-gray-700 text-gray-200 font-bold py-4 px-8 rounded-md hover:bg-gray-800 transition-colors"
+          >
+            DOWNLOAD CV
+          </button>
+        </div>
+        <div class="md:w-1/2">
+          <div class="flex items-center mb-4">
+            <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
+            <span
+              class="text-xs tracking-widest uppercase text-gray-400 font-mono"
+              >About</span
+            >
+          </div>
+          <p class="text-xl leading-relaxed text-gray-400 mb-8">
+            I am Muskan, a Software Engineer with a passion for building,
+            creating, and solving. My journey with technology began not with a
+            career, but with a simple curiosity that has since evolved into a
+            professional commitment to crafting elegant and performant digital
+            experiences. Over my career, I specialize in using Angular and Ionic
+            to architect scalable and complex platforms that turn intricate data
+            into seamless digital experiences. Ultimately, I am a builder
+            committed to crafting intuitive user experiences and writing code
+            that is as reliable as it is innovative.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-16 md:py-24 scroll-mt-28">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <!-- Experience Column -->
+          <div>
+            <div class="flex items-center mb-8">
+              <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
+              <h3 class="text-xs tracking-widest uppercase text-gray-400">
+                Experience
+              </h3>
+            </div>
+
+            <!-- Experience Item: GTROPY -->
+            <div class="relative pl-8 mb-8">
+              <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
+              <div
+                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-gray-400 -translate-x-1/2 -translate-y-1/2"
+              ></div>
+              <h4 class="text-xl font-bold text-gray-200">GTROPY</h4>
+              <p class="text-gray-400 mb-2">Software Associate Level 2</p>
+              <p class="text-xs text-gray-500 mb-4">FEBRUARY 2025 - PRESENT</p>
+              <p class="text-sm text-gray-400">
+                Working as an Angular and Ionic Developer, I've built web and
+                mobile applications from the ground up.
+              </p>
+            </div>
+
+            <!-- Experience Item: MapmyIndia -->
+            <div class="relative pl-8">
+              <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
+              <div
+                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-gray-400 -translate-x-1/2 -translate-y-1/2"
+              ></div>
+              <h4 class="text-xl font-bold text-gray-200">MapmyIndia</h4>
+              <p class="text-gray-400 mb-2">Software Trainee</p>
+              <p class="text-xs text-gray-500 mb-4">JUNE 2023 - JANUARY 2025</p>
+              <p class="text-sm text-gray-400">
+                Developed and maintained front-end applications as an Angular
+                Developer.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div>
+            <div class="flex items-center mb-8">
+              <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
+              <h3 class="text-xs tracking-widest uppercase text-gray-400">
+                Education
+              </h3>
+            </div>
+            <!-- Education Item: Tender Heart School -->
+            <div class="relative pl-8">
+              <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
+              <div
+                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-gray-400 -translate-x-1/2 -translate-y-1/2"
+              ></div>
+              <h4 class="text-xl font-bold text-gray-200">
+                Manipal University Jaipur
+              </h4>
+              <p class="text-gray-400 mb-2">
+                Master of Computer Application (Cyber Security)
+              </p>
+              <p class="text-xs text-gray-500 mb-4">CGPA: 8.96</p>
+            </div>
+            <!-- Education Item: St. Xavier's College -->
+            <div class="relative pl-8 mb-8">
+              <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
+              <div
+                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-gray-400 -translate-x-1/2 -translate-y-1/2"
+              ></div>
+              <h4 class="text-xl font-bold text-gray-200">
+                St. Xavier’s College, Ranchi
+              </h4>
+              <p class="text-gray-400 mb-2">Bachelor of Computer Application</p>
+              <p class="text-xs text-gray-500 mb-4">CGPA: 8.41/10.0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="works" class="py-16 md:py-24 scroll-mt-32">
+      <div class="max-w-3xl mb-8">
+        <div class="flex items-center mb-4">
+          <span class="inline-block h-px w-8 bg-gray-400 mr-2"></span>
+          <span
+            class="text-xs tracking-widest uppercase text-gray-400 font-mono"
+            >Recent Works</span
+          >
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-300">
+          Here are some of projects I have done lately. Feel free to
+          check them out.
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <!-- Mappls API Demo Project -->
+        <div
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 group cursor-pointer"
+        >
+          <!-- Using a placeholder image for a map-related project -->
+          <img
+            src="https://placehold.co/120x120/1f2937/d1d5db?text=Map+API"
+            alt="Mappls API Demonstration Project"
+            class="flex-shrink-0 w-32 h-32 rounded-lg object-cover"
+          />
+          <div class="flex-grow">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="text-xl font-bold text-gray-200 group-hover:underline">
+                Mappls API Demonstration
+              </h4>
+              <a
+                href="https://miko-29.github.io/Mappls/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-gray-300 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Web Application</p>
+            <p class="text-sm text-gray-400">
+              A comprehensive demonstration of the **Mappls Map API**,
+              showcasing my ability to integrate complex geospatial services.
+              This project demonstrates core functionalities including
+              **plotting custom markers**, creating **polylines**, and
+              retrieving **geospatial data** such as human-readable addresses,
+              place details, and road distances.
+            </p>
+          </div>
+        </div>
+        <!-- To-Do App Project -->
+        <div
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 group cursor-pointer"
+        >
+          <!-- Using a placeholder image for a to-do app -->
+          <img
+            src="https://placehold.co/120x120/1f2937/d1d5db?text=To+Do+App"
+            alt="Angular To-Do App Project"
+            class="flex-shrink-0 w-32 h-32 rounded-lg object-cover"
+          />
+          <div class="flex-grow">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="text-xl font-bold text-gray-200 group-hover:underline">
+                Angular To-Do App
+              </h4>
+              <a
+                href="https://miko-29.github.io/Todo-Angular-App/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-gray-300 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Web Application</p>
+            <p class="text-sm text-gray-400">
+              A practical **To-Do List application** built with **Angular**.
+              This project demonstrates fundamental front-end skills, including
+              **state management**, **dynamic rendering**, and **user
+              interaction**, showcasing my ability to create clean, functional,
+              and user-friendly web interfaces.
+            </p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <!-- <div class="flex space-x-4 group cursor-pointer">
+              <img src="https://placehold.co/100x100/1f2937/d1d5db?text=Image+3" alt="Rucksuck Project" class="flex-shrink-0 w-24 h-24 rounded-lg object-cover">
+              <div class="flex-grow">
+                <div class="flex justify-between items-center mb-1">
+                  <h4 class="text-xl font-bold text-gray-200 group-hover:underline">Rucksuck.</h4>
+                  <a href="#" class="text-gray-400 hover:text-gray-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Branding</p>
+                <p class="text-sm text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div> -->
+        <!-- Project 4 -->
+        <!-- <div class="flex space-x-4 group cursor-pointer">
+              <img src="https://placehold.co/100x100/1f2937/d1d5db?text=Image+4" alt="Since Day One Project" class="flex-shrink-0 w-24 h-24 rounded-lg object-cover">
+              <div class="flex-grow">
+                <div class="flex justify-between items-center mb-1">
+                  <h4 class="text-xl font-bold text-gray-200 group-hover:underline">Since Day One.</h4>
+                  <a href="#" class="text-gray-400 hover:text-gray-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-sm text-gray-500 mb-2">Website</p>
+                <p class="text-sm text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div> -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-300 mb-8">
+        I would love to hear from you. Whether it's a project, an idea, or just
+        a chat. Let's build something great.
+      </h2>
+      <form class="space-y-6">
+        <input
+          type="text"
+          placeholder="Your name"
+          class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 focus:outline-none focus:border-gray-500"
+        />
+        <input
+          type="email"
+          placeholder="Your email address"
+          class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 focus:outline-none focus:border-gray-500"
+        />
+        <textarea
+          placeholder="Your message"
+          rows="6"
+          class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 resize-none focus:outline-none focus:border-gray-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full bg-white text-gray-900 font-bold py-4 rounded-md hover:bg-gray-200 transition-colors"
+        >
+          Send it
+        </button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-500">
+    <p>&copy; 2024 Muskan. All rights reserved.</p>
+  </footer>
+</div>
