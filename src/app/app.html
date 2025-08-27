@@ -371,36 +371,57 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 md:py-24">
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-300 mb-8">
-        I would love to hear from you. Whether it's a project, an idea, or just
-        a chat. Let's build something great.
-      </h2>
-      <form class="space-y-6">
-        <input
-          type="text"
-          placeholder="Your name"
-          class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 focus:outline-none focus:border-gray-500"
-        />
-        <input
-          type="email"
-          placeholder="Your email address"
-          class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 focus:outline-none focus:border-gray-500"
-        />
-        <textarea
-          placeholder="Your message"
-          rows="6"
-          class="w-full bg-gray-800 text-gray-300 border border-gray-700 rounded-md p-4 resize-none focus:outline-none focus:border-gray-500"
-        ></textarea>
-        <button
-          type="submit"
-          class="w-full bg-white text-gray-900 font-bold py-4 rounded-md hover:bg-gray-200 transition-colors"
-        >
-          Send it
-        </button>
-      </form>
+ <!-- Contact Section -->
+<!-- This section contains a contact form with a modern, dark-themed design. -->
+<section id="contact" class="py-16 md:py-24 scroll-mt-24">
+      <div class="container mx-auto px-6 max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-100 text-center mb-8">
+          Let's Connect and Build Something Great.
+        </h2>
+        <p class="text-center text-lg text-gray-400 mb-12">
+          I would love to hear from you, whether it's a project idea, a job opportunity, or just a chat about technology.
+        </p>
+        
+        <!-- Angular form with ngSubmit and ngModel for two-way data binding -->
+        <form class="space-y-6" (ngSubmit)="sendEmail()">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full bg-slate-800 text-gray-300 border border-slate-700 rounded-lg p-4 transition-colors duration-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+            [(ngModel)]="formData.name"
+            name="name"
+          />
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            class="w-full bg-slate-800 text-gray-300 border border-slate-700 rounded-lg p-4 transition-colors duration-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+            [(ngModel)]="formData.email"
+            name="email"
+          />
+          <textarea
+            placeholder="Your Message"
+            rows="6"
+            class="w-full bg-slate-800 text-gray-300 border border-slate-700 rounded-lg p-4 resize-none transition-colors duration-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+            [(ngModel)]="formData.message"
+            name="message"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full bg-teal-500 text-slate-950 font-bold py-4 rounded-lg hover:bg-teal-400 transition-colors duration-300 transform hover:scale-105"
+          >
+            Send Message
+          </button>
+          
+          <!-- Conditional display of status messages using NgIf -->
+          @if (statusMessage()) {
+            <div class="text-center mt-4 font-semibold" [ngClass]="{'text-green-400': isSuccess(), 'text-red-400': !isSuccess()}">
+              {{ statusMessage() }}
+            </div>
+          }
+        </form>
+      </div>
     </section>
+
   </div>
 
   <!-- Footer -->
