@@ -32,7 +32,7 @@ scrollToSection(sectionId: string): void {
   // Initialize EmailJS in the constructor
   constructor() {
     emailjs.init({
-      publicKey: environment.EMAILJS_USER_ID,,
+      publicKey: environment.EMAILJS_USER_ID,
     });
   }
 
