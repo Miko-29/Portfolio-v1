@@ -1,104 +1,54 @@
-<div
-  class="bg-gray-950 text-gray-200 min-h-screen font-sans antialiased relative overflow-hidden"
->
+<div class="bg-gray-950 text-gray-200 min-h-screen font-sans antialiased relative overflow-hidden">
   <!-- Main Content Container -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Navigation Bar -->
     <nav
-      class="flex justify-between items-center py-8 md:py-8 fixed top-0 left-0 right-0 bg-gray-950 bg-opacity-90 backdrop-blur-md z-20 px-4 sm:px-6 lg:px-8 border-b border-gray-800"
-    >
+      class="flex justify-between items-center py-8 md:py-8 fixed top-0 left-0 right-0 bg-gray-950 bg-opacity-90 backdrop-blur-md z-20 px-4 sm:px-6 lg:px-8 border-b border-gray-800">
       <div class="text-xl font-bold font-serif text-gray-200">MUSKAN.</div>
       <div class="hidden md:flex space-x-8 lg:space-x-12">
-        <a
-          (click)="scrollToSection('intro')"
-          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans"
-          >Intro</a
-        >
-        <a
-          (click)="scrollToSection('about')"
-          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans"
-          >About</a
-        >
-        <a
-          (click)="scrollToSection('experience')"
-          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans"
-          >Experience</a
-        >
-        <a
-          (click)="scrollToSection('works')"
-          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans"
-          >Works</a
-        >
-        <a
-          (click)="scrollToSection('contact')"
-          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans"
-          >Say hello</a
-        >
+        <a (click)="scrollToSection('intro')"
+          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans">Intro</a>
+        <a (click)="scrollToSection('about')"
+          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans">About</a>
+        <a (click)="scrollToSection('experience')"
+          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans">Experience</a>
+        <a (click)="scrollToSection('works')"
+          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans">Works</a>
+        <a (click)="scrollToSection('contact')"
+          class="hover:text-orange-400 transition-colors uppercase text-sm font-medium cursor-pointer font-sans">Say
+          hello</a>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <header
-      id="intro"
-      class="flex flex-col md:flex-row items-center md:items-start justify-between py-16 sm:py-24 md:py-32 lg:py-48"
-    >
+    <header id="intro"
+      class="flex flex-col md:flex-row items-center md:items-start justify-between py-16 sm:py-24 md:py-32 lg:py-48">
       <div class="max-w-3xl">
         <div class="flex items-center mb-4">
           <span class="inline-block h-px w-8 bg-orange-400 mr-2"></span>
-          <span
-            class="text-xs tracking-widest uppercase text-orange-400 font-mono"
-            >Hello</span
-          >
+          <span class="text-xs tracking-widest uppercase text-orange-400 font-mono">Hello</span>
         </div>
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight"
-        >
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight">
           I am Muskan,<br />a Software Engineer<br />& Front-End<br />Developer
           based<br />in India.
         </h1>
       </div>
 
       <!-- Vertical Socials & Scroll Indicator -->
-      <div
-        class="hidden md:flex flex-col items-end space-y-8 lg:space-y-16 mt-16 md:mt-0"
-      >
+      <div class="hidden md:flex flex-col items-end space-y-8 lg:space-y-16 mt-16 md:mt-0">
         <div class="flex flex-col items-end space-y-4 text-gray-400">
-          <a
-            href="https://github.com/Miko-29"
-            target="_blank"
-            class="hover:text-orange-300 transition-colors text-xs tracking-widest uppercase font-mono"
-            >Github</a
-          >
-          <a
-            href="https://www.linkedin.com/in/muskan-kumari-7a8937227"
-            target="_blank"
-            class="hover:text-orange-300 transition-colors text-xs tracking-widest uppercase font-mono"
-            >Linkedin
+          <a href="https://github.com/Miko-29" target="_blank"
+            class="hover:text-orange-300 transition-colors text-xs tracking-widest uppercase font-mono">Github</a>
+          <a href="https://www.linkedin.com/in/muskan-kumari-7a8937227" target="_blank"
+            class="hover:text-orange-300 transition-colors text-xs tracking-widest uppercase font-mono">Linkedin
           </a>
-          <a
-            href="https://leetcode.com/u/miko29/"
-            target="_blank"
-            class="hover:text-orange-300 transition-colors text-xs tracking-widest uppercase font-mono"
-            >Leetcode</a
-          >
+          <a href="https://leetcode.com/u/miko29/" target="_blank"
+            class="hover:text-orange-300 transition-colors text-xs tracking-widest uppercase font-mono">Leetcode</a>
         </div>
-        <a
-          (click)="scrollToSection('about')"
-          class="animate-bounce mt-16 cursor-pointer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 text-orange-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+        <a (click)="scrollToSection('about')" class="animate-bounce mt-16 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-400" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
@@ -109,18 +59,12 @@
       <div class="flex flex-col md:flex-row items-center md:space-x-16">
         <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center items-center">
           <!-- Placeholder image added here -->
-          <img
-            src="assets/muskan_photo.jpg"
-            alt="Muskan Kumari"
-            class="squared-full shadow-lg mx-auto"
-          />
+          <img src="assets/muskan_photo.jpg" alt="Muskan Kumari" class="squared-full shadow-lg mx-auto" />
         </div>
         <div class="md:w-1/2">
           <div class="flex items-center mb-4">
             <span class="inline-block h-px w-8 bg-orange-400 mr-2"></span>
-            <span
-              class="text-xs tracking-widest uppercase text-orange-400 font-mono"
-            >About</span>
+            <span class="text-xs tracking-widest uppercase text-orange-400 font-mono">About</span>
           </div>
           <p class="text-xl leading-relaxed text-gray-400 mb-8 font-sans">
             I am Muskan, a Software Engineer with a passion for building,
@@ -135,14 +79,11 @@
           </p>
           <!-- Download CV button moved to a new row -->
           <div class="mt-8">
-  <a
-    href="assets/Muskan_Kumari_SDE_2Yrs.pdf"
-    download
-    class="bg-transparent border border-orange-700 text-orange-200 font-bold py-4 px-8 rounded-md hover:bg-orange-800 transition-colors font-sans inline-block text-center"
-  >
-    DOWNLOAD RESUME
-  </a>
-</div>
+            <a href="assets/Muskan_Kumari_Frontend_Resume.pdf" download
+              class="bg-transparent border border-orange-700 text-orange-200 font-bold py-4 px-8 rounded-md hover:bg-orange-800 transition-colors font-sans inline-block text-center">
+              DOWNLOAD RESUME
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -164,9 +105,8 @@
             <!-- Experience Item: GTROPY -->
             <div class="relative pl-8 mb-8">
               <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
-              <div
-                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2"
-              ></div>
+              <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2">
+              </div>
               <h4 class="text-xl font-bold text-orange-200 font-sans">GTROPY</h4>
               <p class="text-gray-400 mb-2 font-sans">Software Associate Level 2</p>
               <p class="text-xs text-gray-500 mb-4 font-sans">FEBRUARY 2025 - PRESENT</p>
@@ -179,9 +119,8 @@
             <!-- Experience Item: MapmyIndia -->
             <div class="relative pl-8">
               <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
-              <div
-                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2"
-              ></div>
+              <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2">
+              </div>
               <h4 class="text-xl font-bold text-orange-200 font-sans">MapmyIndia</h4>
               <p class="text-gray-400 mb-2 font-sans">Software Trainee</p>
               <p class="text-xs text-gray-500 mb-4 font-sans">JUNE 2023 - JANUARY 2025</p>
@@ -203,9 +142,8 @@
             <!-- Education Item: Tender Heart School -->
             <div class="relative pl-8">
               <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
-              <div
-                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2"
-              ></div>
+              <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2">
+              </div>
               <h4 class="text-xl font-bold text-orange-200 font-sans">
                 Manipal University Jaipur
               </h4>
@@ -217,9 +155,8 @@
             <!-- Education Item: St. Xavier's College -->
             <div class="relative pl-8 mb-8">
               <div class="absolute left-0 top-0 h-full w-px bg-gray-800"></div>
-              <div
-                class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2"
-              ></div>
+              <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-orange-400 -translate-x-1/2 -translate-y-1/2">
+              </div>
               <h4 class="text-xl font-bold text-orange-200 font-sans">
                 St. Xavier’s College, Ranchi
               </h4>
@@ -232,164 +169,116 @@
     </section>
 
     <!-- Portfolio Section -->
-<section id="works" class="py-16 md:py-24 scroll-mt-32">
-  <div class="max-w-3xl mb-8">
-    <div class="flex items-center mb-4">
-      <span class="inline-block h-px w-8 bg-orange-400 mr-2"></span>
-      <span
-        class="text-xs tracking-widest uppercase text-orange-400 font-mono"
-        >Recent Works</span
-      >
-    </div>
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-100">
-      Here are some of projects I have done lately. Feel free to
-      check them out.
-    </h2>
-  </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Project 1 -->
-    <!-- Mappls API Demo Project -->
-    <div
-      class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 group cursor-pointer"
-    >
-      <!-- Using a placeholder image for a map-related project -->
-      <img
-        src="https://placehold.co/120x120/1f2937/d1d5db?text=Map+API"
-        alt="Mappls API Demonstration Project"
-        class="flex-shrink-0 w-32 h-32 rounded-lg object-cover"
-      />
-      <div class="flex-grow">
-        <div class="flex justify-between items-center mb-1">
-          <h4 class="text-xl font-bold text-orange-200 group-hover:underline">
-            Mappls API Demonstration
-          </h4>
-          <a
-            href="https://miko-29.github.io/Mappls/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-orange-400 hover:text-orange-300 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
+    <section id="works" class="py-16 md:py-24 scroll-mt-32">
+      <div class="max-w-3xl mb-8">
+        <div class="flex items-center mb-4">
+          <span class="inline-block h-px w-8 bg-orange-400 mr-2"></span>
+          <span class="text-xs tracking-widest uppercase text-orange-400 font-mono">Recent Works</span>
         </div>
-        <p class="text-sm text-gray-500 mb-2">Web Application</p>
-        <p class="text-sm text-gray-400">
-          This project is a comprehensive demonstration of the **Mappls Map API**, showcasing my ability to integrate complex geospatial services. The application allows users to plot up to 50 custom markers on a map, with a click-to-highlight feature. It also includes the functionality to retrieve detailed geospatial data such as human-readable addresses, place details, and road distances. The project further demonstrates advanced mapping features like drawing a **polyline** with custom colors to visualize routes or paths.
-        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-100">
+          Here are some of projects I have done lately. Feel free to
+          check them out.
+        </h2>
       </div>
-    </div>
-    <!-- To-Do App Project -->
-    <div
-      class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 group cursor-pointer"
-    >
-      <!-- Using a placeholder image for a to-do app -->
-      <img
-        src="https://placehold.co/120x120/1f2937/d1d5db?text=To+Do+App"
-        alt="Angular To-Do App Project"
-        class="flex-shrink-0 w-32 h-32 rounded-lg object-cover"
-      />
-      <div class="flex-grow">
-        <div class="flex justify-between items-center mb-1">
-          <h4 class="text-xl font-bold text-orange-200 group-hover:underline">
-            Angular To-Do App
-          </h4>
-          <a
-            href="https://miko-29.github.io/Todo-Angular-App/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-orange-400 hover:text-orange-300 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <!-- Mappls API Demo Project -->
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 group cursor-pointer">
+          <!-- Using a placeholder image for a map-related project -->
+          <img src="https://placehold.co/120x120/1f2937/d1d5db?text=Map+API" alt="Mappls API Demonstration Project"
+            class="flex-shrink-0 w-32 h-32 rounded-lg object-cover" />
+          <div class="flex-grow">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="text-xl font-bold text-orange-200 group-hover:underline">
+                Mappls API Demonstration
+              </h4>
+              <a href="https://miko-29.github.io/Mappls/" target="_blank" rel="noopener noreferrer"
+                class="text-orange-400 hover:text-orange-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Web Application</p>
+            <p class="text-sm text-gray-400">
+              This project is a comprehensive demonstration of the **Mappls Map API**, showcasing my ability to
+              integrate complex geospatial services. The application allows users to plot up to 50 custom markers on a
+              map, with a click-to-highlight feature. It also includes the functionality to retrieve detailed geospatial
+              data such as human-readable addresses, place details, and road distances. The project further demonstrates
+              advanced mapping features like drawing a **polyline** with custom colors to visualize routes or paths.
+            </p>
+          </div>
         </div>
-        <p class="text-sm text-gray-500 mb-2">Web Application</p>
-        <p class="text-sm text-gray-400">
-          A practical **To-Do List application** built with **Angular**. This project serves as a clear demonstration of core front-end skills, including **state management** for adding, editing, and deleting tasks, **dynamic rendering** to reflect real-time changes, and intuitive **user interaction** with a focus on a clean and functional UI. It showcases my ability to create responsive and user-friendly web interfaces from the ground up.
-        </p>
+        <!-- To-Do App Project -->
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 group cursor-pointer">
+          <!-- Using a placeholder image for a to-do app -->
+          <img src="https://placehold.co/120x120/1f2937/d1d5db?text=To+Do+App" alt="Angular To-Do App Project"
+            class="flex-shrink-0 w-32 h-32 rounded-lg object-cover" />
+          <div class="flex-grow">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="text-xl font-bold text-orange-200 group-hover:underline">
+                Angular To-Do App
+              </h4>
+              <a href="https://miko-29.github.io/Todo-Angular-App/" target="_blank" rel="noopener noreferrer"
+                class="text-orange-400 hover:text-orange-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Web Application</p>
+            <p class="text-sm text-gray-400">
+              A practical **To-Do List application** built with **Angular**. This project serves as a clear
+              demonstration of core front-end skills, including **state management** for adding, editing, and deleting
+              tasks, **dynamic rendering** to reflect real-time changes, and intuitive **user interaction** with a focus
+              on a clean and functional UI. It showcases my ability to create responsive and user-friendly web
+              interfaces from the ground up.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<!-- This section contains a contact form with a modern, dark-themed design. -->
-<section id="contact" class="py-16 md:py-24 scroll-mt-20">
-    <div class="container mx-auto px-6 max-w-2xl">
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-100 text-center mb-8">
-        Let's Connect and Build Something Great.
-      </h2>
-      <p class="text-center text-lg text-gray-400 mb-12">
-        I would love to hear from you, whether it's a project idea, a job opportunity, or just a chat about technology.
-      </p>
+    <!-- Contact Section -->
+    <!-- This section contains a contact form with a modern, dark-themed design. -->
+    <section id="contact" class="py-16 md:py-24 scroll-mt-20">
+      <div class="container mx-auto px-6 max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-100 text-center mb-8">
+          Let's Connect and Build Something Great.
+        </h2>
+        <p class="text-center text-lg text-gray-400 mb-12">
+          I would love to hear from you, whether it's a project idea, a job opportunity, or just a chat about
+          technology.
+        </p>
 
-      <form class="space-y-4" (ngSubmit)="sendEmail()">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            name="name"
-            class="w-full bg-slate-900 text-gray-300 border-2 border-slate-700 rounded-lg p-4 transition-colors duration-300 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
-            [(ngModel)]="formData.name"
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email Address"
-            name="email"
-            class="w-full bg-slate-900 text-gray-300 border-2 border-slate-700 rounded-lg p-4 transition-colors duration-300 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
-            [(ngModel)]="formData.email"
-            required
-          />
-        </div>
-        <textarea
-          placeholder="Your Message"
-          rows="4"
-          name="message"
-          class="w-full bg-slate-900 text-gray-300 border-2 border-slate-700 rounded-lg p-4 resize-none transition-colors duration-300 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
-          [(ngModel)]="formData.message"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          class="w-full bg-orange-500 text-slate-950 font-bold py-4 rounded-lg hover:bg-orange-400 transition-colors duration-300 transform hover:scale-105"
-        >
-          Send Message
-        </button>
-      </form>
+        <form class="space-y-4" (ngSubmit)="sendEmail()">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Your Name" name="name"
+              class="w-full bg-slate-900 text-gray-300 border-2 border-slate-700 rounded-lg p-4 transition-colors duration-300 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+              [(ngModel)]="formData.name" required />
+            <input type="email" placeholder="Your Email Address" name="email"
+              class="w-full bg-slate-900 text-gray-300 border-2 border-slate-700 rounded-lg p-4 transition-colors duration-300 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+              [(ngModel)]="formData.email" required />
+          </div>
+          <textarea placeholder="Your Message" rows="4" name="message"
+            class="w-full bg-slate-900 text-gray-300 border-2 border-slate-700 rounded-lg p-4 resize-none transition-colors duration-300 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+            [(ngModel)]="formData.message" required></textarea>
+          <button type="submit"
+            class="w-full bg-orange-500 text-slate-950 font-bold py-4 rounded-lg hover:bg-orange-400 transition-colors duration-300 transform hover:scale-105">
+            Send Message
+          </button>
+        </form>
 
-      @if (statusMessage()) {
-        <div class="text-center mt-4 font-semibold" [ngClass]="{'text-green-400': isSuccess(), 'text-red-400': !isSuccess()}">
+        @if (statusMessage()) {
+        <div class="text-center mt-4 font-semibold"
+          [ngClass]="{'text-green-400': isSuccess(), 'text-red-400': !isSuccess()}">
           {{ statusMessage() }}
         </div>
-      }
-    </div>
-</section>
+        }
+      </div>
+    </section>
 
 
   </div>
